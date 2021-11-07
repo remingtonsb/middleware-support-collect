@@ -3,4 +3,4 @@
   connection: local
   tasks:
   - name: 
-    shell: sh ../scripts/rhsso/set_trace_logs-sso.sh 
+    shell: sh ../scripts/rhsso/set_sso_trace_logs.sh

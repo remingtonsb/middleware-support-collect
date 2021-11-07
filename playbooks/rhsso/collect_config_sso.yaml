@@ -3,4 +3,4 @@
   connection: local
   tasks:
   - name: 
-    shell: sh ../scripts/rhsso/get_configs-sso.sh 
+    shell: sh ../scripts/rhsso/get_sso_configs.sh 

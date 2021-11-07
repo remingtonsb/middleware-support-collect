@@ -1,6 +1,6 @@
-- name: collect logs from all rhsso containers
+- name: collect logs from all rhsso containers. PLEASE  "RUN ps aux | grep get_sso" to see all collect process running
   hosts: 127.0.0.1
   connection: local
   tasks:
   - name: 
-    shell: sh ../scripts/rhsso/get_logs_sso.sh 
+    shell: sh ../scripts/rhsso/get_sso_logs.sh

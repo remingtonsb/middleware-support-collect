@@ -1,6 +1,6 @@
-- name: collect log files from all datagrid containers
+- name: collect log files from all datagrid containers. PLEASE RUN "ps aux | grep get_datagrid" to see all process collect running
   hosts: 127.0.0.1
   connection: local
   tasks:
   - name: 
-    shell: sh ../scripts/datagrid/get_logs_datagrid.sh 
+    shell: sh ../scripts/datagrid/get_datagrid_logs.sh

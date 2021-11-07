@@ -3,4 +3,4 @@
   connection: local
   tasks:
   - name: 
-    shell: sh ../scripts/datagrid/set_trace_logs-datagrid.sh 
+    shell: sh ../scripts/datagrid/set_datagrid_trace_logs.sh

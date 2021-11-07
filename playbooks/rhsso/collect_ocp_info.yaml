@@ -1,0 +1,8 @@
+- name: collect ocp info
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - name: 
+    shell: sh ../scripts/rhsso/get_sso_openshift_informations.sh
+    async: 600
+    poll: 0 

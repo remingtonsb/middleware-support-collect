@@ -1,0 +1,9 @@
+---
+- name: collect ocp info. PLEASE  "RUN  ps aux | grep get_ " to see all collect process running 
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - name: 
+    shell: sh ../scripts/datagrid/get_datagrid_openshift_informations.sh
+    async: 600
+    poll: 0 

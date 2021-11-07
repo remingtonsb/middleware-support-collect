@@ -3,6 +3,6 @@
   connection: local
   tasks:
   - name: 
-    shell: sh ../scripts/rhsso/get_thread_dump.sh
+    shell: sh ../scripts/rhsso/get_sso_thread_dump.sh
     async: 45
     poll: 0 

@@ -1,5 +1,5 @@
 ---
-- name: Playbook master Datagrid
+- name: Playbook master Datagrid PLEASE  "RUN  ps aux | grep get_datagrid " to see all collect process running
   hosts: 127.0.0.1
   tasks:
 
@@ -11,6 +11,10 @@
 
 # COLLECT HEAP DUMP ASYNC (This playbook will run in paralel mode, and will killed after time in async "seconds"  to view script running, type this command "ps aux | grep .sh")
 - import_playbook: datagrid/collect_heap_dump.yaml
+
+#Collect informations about cpu and memory Openshift nodes and Openshift pods
+- import_playbook: datagrid/collect_ocp_info.yaml
+
 
 # COLLECT CONFIG FILES
 - import_playbook: datagrid/collect_config_datagrid.yaml
