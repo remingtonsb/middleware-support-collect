@@ -1,0 +1,8 @@
+- name: collect thread dump from all rhsso containers
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - name: 
+    shell: sh ../scripts/rhsso/get_thread_dump.sh
+    async: 45
+    poll: 0 

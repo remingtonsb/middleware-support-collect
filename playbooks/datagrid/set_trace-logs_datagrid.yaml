@@ -1,0 +1,6 @@
+- name: collect heap dump from all datagrid containers
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - name: 
+    shell: sh ../scripts/datagrid/set_trace_logs-datagrid.sh 

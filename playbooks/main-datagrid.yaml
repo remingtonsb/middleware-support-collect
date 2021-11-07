@@ -1,0 +1,23 @@
+---
+- name: Playbook master Datagrid
+  hosts: 127.0.0.1
+  tasks:
+
+# Set Log TRACE (This is a optional script, if requested by support)
+#- import_playbook: rhsso/set_trace-logs_datagrid.yaml
+
+# COLLECT THREAD DUMP ASYNC (This playbook will run in paralel mode, and will killed after time in async "seconds"  to view script running, type this command "ps aux | grep .sh")
+- import_playbook: datagrid/collect_thread_dump.yaml
+
+# COLLECT HEAP DUMP ASYNC (This playbook will run in paralel mode, and will killed after time in async "seconds"  to view script running, type this command "ps aux | grep .sh")
+- import_playbook: datagrid/collect_heap_dump.yaml
+
+# COLLECT CONFIG FILES
+- import_playbook: datagrid/collect_config_datagrid.yaml
+
+# COLLECT LOGS SSO (This script collect all logs in log directories, gc , server, audit, etc.... )
+- import_playbook: datagrid/collect_logs_datagrid.yaml
+
+# UNSET TRACE LOGS (This script needs run if you SET log as TRACE earlier)  
+#- import_playbook: rhsso/unset_trace-logs_datagrid.yaml
+

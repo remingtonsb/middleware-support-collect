@@ -1,0 +1,6 @@
+- name: collect heap dump from all rhsso containers
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - name: 
+    shell: sh ../scripts/rhsso/get_logs_sso.sh 

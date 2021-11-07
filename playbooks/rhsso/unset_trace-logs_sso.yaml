@@ -1,0 +1,6 @@
+- name: collect unset trace logs from all rhsso containers
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - name: 
+    shell: sh ../scripts/rhsso/unset_trace_logs-sso.sh

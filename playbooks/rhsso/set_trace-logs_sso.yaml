@@ -1,0 +1,6 @@
+- name: collect Trace Logs  from all RHSSO containers
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - name: 
+    shell: sh ../scripts/rhsso/set_trace_logs-sso.sh 
