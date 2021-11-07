@@ -75,7 +75,7 @@ playbooks/
         ├── set_trace_logs-sso.sh
         └── unset_trace_logs-sso.sh
 
-All collects are based in following documentations:
+All collectios are based in following documentations:
 
 https://access.redhat.com/solutions/21109
 https://access.redhat.com/articles/5865191
