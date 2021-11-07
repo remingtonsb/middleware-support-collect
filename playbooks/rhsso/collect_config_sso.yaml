@@ -1,4 +1,4 @@
-- name: collect heap dump from all rhsso containers
+- name: collect all config files from all rhsso containers
   hosts: 127.0.0.1
   connection: local
   tasks:

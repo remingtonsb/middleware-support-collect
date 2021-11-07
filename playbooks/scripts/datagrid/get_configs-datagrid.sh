@@ -4,7 +4,7 @@
 
 NAMESPACE=datagrid-site-azure
 APP=datagrid
-CONF_DIR=$PWD/configuration-$APP-$(date +%Y-%m-%d)
+CONF_DIR=../result_collections/datagrid/configuration-$APP-$(date +%Y-%m-%d)
 mkdir -p $CONF_DIR
 
 check_pods()

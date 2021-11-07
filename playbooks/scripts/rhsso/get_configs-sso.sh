@@ -4,9 +4,7 @@
 
 NAMESPACE=datagrid-site-azure
 APP=sso
-CONF_DIR=$PWD/configuration-$APP-$(date +%Y-%m-%d)
-#DATAGRID_DIR=/opt/datagrid
-#HEAP_DUMP_DIR=$PWD/heap-dumps-$(date +%Y-%m-%d)
+CONF_DIR=../result_collections/rhsso/configuration-$APP-$(date +%Y-%m-%d)
 mkdir -p $CONF_DIR
 
 check_pods()

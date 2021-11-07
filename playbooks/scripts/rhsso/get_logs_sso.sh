@@ -4,7 +4,7 @@
 
 NAMESPACE=datagrid-site-azure
 APP=sso
-LOGS_DIR=$PWD/logs-$APP-$(date +%Y-%m-%d)
+LOGS_DIR=../result_collections/rhsso/logs-$APP-$(date +%Y-%m-%d)
 mkdir -p $LOGS_DIR
 
 check_pods()
@@ -19,6 +19,6 @@ echo "No pods Running"
 exit 1
 else
 
-for i in $(check_pods | grep -v acl | awk '{print $1}');do mkdir  $LOGS_DIR/$i ;oc -n $NAMESPACE rsync $i:/opt/eap/standalone/log/  $LOGS_DIR/$i/
+for i in $(check_pods | grep -v acl | awk '{print $1}');do mkdir  $LOGS_DIR/$i ;oc logs $i > $LOGS_DIR/$i/$(date +%Y-%m-%d-%H-%M-%S)-server.log;oc logs $i --previous > $LOGS_DIR/$i/$(date +%Y-%m-%d-%H-%M-%S)-previous-server.log ;oc -n $NAMESPACE rsync $i:/opt/eap/standalone/log/  $LOGS_DIR/$i/
 done
 fi
