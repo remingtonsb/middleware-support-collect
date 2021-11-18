@@ -24,7 +24,5 @@ else
 
 while ps aux | grep -E 'get_sso_thread_dump|get_sso_heap_dump' | grep -v grep; [ $? -eq 0 ];do echo "" >> $OCP_DIR/ocp_data.txt; date >> $OCP_DIR/ocp_data.txt; echo "" >> $OCP_DIR/ocp_data.txt; echo "NODES" >> $OCP_DIR/ocp_data.txt ; oc adm top nodes >> $OCP_DIR/ocp_data.txt ;echo "PODS" >> $OCP_DIR/ocp_data.txt ;oc adm top pods >> $OCP_DIR/ocp_data.txt; sleep 2;done
 
-#for i in $(seq 1 $SECONDS);do echo "" >> $OCP_DIR/ocp_data.txt; date >> $OCP_DIR/ocp_data.txt; echo "" >> $OCP_DIR/ocp_data.txt; echo "NODES" >> $OCP_DIR/ocp_data.txt ; oc adm top nodes >> $OCP_DIR/ocp_data.txt ;echo "PODS" >> $OCP_DIR/ocp_data.txt ;oc adm top pods >> $OCP_DIR/ocp_data.txt; sleep 3
-#done
 
 fi

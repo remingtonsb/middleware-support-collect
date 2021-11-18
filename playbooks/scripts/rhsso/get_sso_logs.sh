@@ -21,7 +21,7 @@ else
 
 while ps aux | grep -E 'get_sso_thread_dump|get_sso_heap_dump' | grep -v grep; [ $? -eq 0 ];do echo "THREAD DUMP RODANDO"; sleep 2;done 
 
-for i in $(check_pods | grep -v acl | awk '{print $1}');do mkdir  $LOGS_DIR/$i ;oc logs $i > $LOGS_DIR/$i/$(date +%Y-%m-%d-%H-%M-%S)-server.log;oc logs $i --previous > $LOGS_DIR/$i/$(date +%Y-%m-%d-%H-%M-%S)-previous-server.log ;oc -n $NAMESPACE rsync $i:/opt/eap/standalone/log/  $LOGS_DIR/$i/
+for i in $(check_pods | grep -v acl | awk '{print $1}');do mkdir  $LOGS_DIR/$i ;oc -n $NAMESPACE logs $i > $LOGS_DIR/$i/$(date +%Y-%m-%d-%H-%M-%S)-server.log;oc -n $NAMESPACE logs $i --previous > $LOGS_DIR/$i/$(date +%Y-%m-%d-%H-%M-%S)-previous-server.log ;oc -n $NAMESPACE rsync $i:/opt/eap/standalone/log/  $LOGS_DIR/$i/
 done
 
 fi
